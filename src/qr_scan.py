@@ -42,10 +42,12 @@ while(cap.isOpened()):
             #cv2.putText(img,text,(d.rect[0],d.rect[1]-50), cv2.FONT_HERSHEY_SIMPLEX,3,(0,255,0),2,cv2.LINE_AA)
             cv2.putText(img,text,(x,y), cv2.FONT_HERSHEY_SIMPLEX, 3, (0,255,0), 2, cv2.LINE_AA)
        
-            if not is_opened:
-                url=barcode_data
-                webbrowser.open(url)
-                is_opened = True
+        
+            url=barcode_data
+            webbrowser.open(url)
+
+            last_scan_time = time.time()
+
 
     cv2.imshow('camera', img)
     key = cv2.waitKey(1)
