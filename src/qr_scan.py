@@ -47,10 +47,10 @@ while(cap.isOpened()):
                 webbrowser.open(url)
                 is_opened = True
 
-        cv2.imshow('camera', img)
-        key = cv2.waitKey(1)
-        if key == ord('q'):
-            break
+    cv2.imshow('camera', img)
+    key = cv2.waitKey(1)
+    if key == ord('q'):
+        break
 cap.release()
 
 #plt.imshow(img)
